@@ -63,7 +63,6 @@ export default {
       findTitle: "",
       findDescription: "",
       findItem: null,
-      numLikes: 0,
     }
   },
   computed: {
@@ -115,7 +114,6 @@ export default {
           title: this.title,
           description: this.description,
           path: r1.data.path,
-          numLikes: this.numLikes,
         });
         this.addItem = r2.data;
       } catch (error) {

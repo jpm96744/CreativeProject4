@@ -22,7 +22,6 @@ const itemSchema = new mongoose.Schema({
   title: String,
   description: String,
   path: String,
-  numLikes: Number,
 });
 
 // Create a model for items in the museum.
@@ -49,7 +48,6 @@ app.post('/api/items', async (req, res) => {
     title: req.body.title,
     description: req.body.description,
     path: req.body.path,
-    numLikes: req.body.numLikes,
   });
   try {
     await item.save();
@@ -90,7 +88,6 @@ app.put('/api/items/:id', async (req, res) => {
     });
     item.title = req.body.title;
     item.description = req.body.description;
-    item.numLikes = req.body.numLikes;
     await item.save();
     res.send(item);
   } catch (error) {

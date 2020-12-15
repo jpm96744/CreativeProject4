@@ -5,7 +5,7 @@
       <h3>{{item.title}}</h3>
       <h2>{{item.description}}</h2>
       <img :src="item.path" />
-      <button @click="like">&hearts;</button>
+      <button>&hearts;</button>
     </div>
   </section>
 </div>
@@ -34,9 +34,6 @@ export default {
         console.log(error);
       }
     },
-    async like() {
-      this.numLikes = this.numLikes + 1;
-    }
   }
 }
 </script>
